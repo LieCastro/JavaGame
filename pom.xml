@@ -5,13 +5,18 @@
 	<artifactId>JavaGame</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
-	<sourceDirectory>C:\Users\Lie\Dropbox\2015.2\JavaGame\src\com\redomar\game</sourceDirectory>
-	<pluginManagement>
+		<sourceDirectory>C:\Users\Lie\Dropbox\2015.2\JavaGame\src\com\redomar\game</sourceDirectory>
+		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.sonarsource.scanner.maven</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
 					<version>3.0.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>3.6</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -31,6 +36,25 @@
 					<source />
 					<target />
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.6</version>
+				<executions>
+					<execution>
+						<id>check</id>
+						<phase>package</phase>
+						<goals>
+							<goal>pmd</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
@@ -151,16 +175,6 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-			<plugin>
-				<groupId>org.sonatype.maven.plugin</groupId>
-				<artifactId>emma-maven-plugin</artifactId>
-				<version>1.3</version>
-				<configuration>
-					<outputFile>target\emmaResult</outputFile>
-					<formats>html,xml,txt</formats>
-				</configuration>
-			</plugin>
-
 		</plugins>
 	</reporting>
 	<dependencies>
@@ -188,11 +202,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-pmd-plugin</artifactId>
-			<version>3.4</version>
-		</dependency>
+
 
 	</dependencies>
 </project>
