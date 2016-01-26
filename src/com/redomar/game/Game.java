@@ -35,7 +35,7 @@ public class Game extends Canvas implements Runnable {
 
 	// Setting the size and name of the frame/canvas
 	private static final long serialVersionUID = 1L;
-	private static final String game_Version = "v1.8.1 Alpha";
+	private static final String GAMEVERSION = "v1.8.1 Alpha";
 	private static final int WIDTH = 160;
 	private static final int HEIGHT = (WIDTH / 3 * 2);
 	private static final int SCALE = 3;
@@ -237,8 +237,8 @@ public class Game extends Canvas implements Runnable {
 				lastTimer += 1000;
 				getFrame().setTitle(
 						"JavaGame - Version "
-								+ WordUtils.capitalize(game_Version).substring(
-										1, game_Version.length()));
+								+ WordUtils.capitalize(GAMEVERSION).substring(
+										1, GAMEVERSION.length()));
 				fps = frames;
 				tps = ticks;
 				frames = 0;
@@ -558,7 +558,7 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public static String getGameVersion() {
-		return game_Version;
+		return GAMEVERSION;
 	}
 
 	public static int getShirtCol() {
