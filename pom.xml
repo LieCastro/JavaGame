@@ -118,7 +118,7 @@
 						<id>validate</id>
 						<phase>test</phase>
 						<goals>
-							<goal>check</goal>
+							<goal>checkstyle</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -127,14 +127,14 @@
 					<consoleOutput>true</consoleOutput>
 					<failsOnError>false</failsOnError>
 					<linkXRef>false</linkXRef>
-					<checkstyleRules>
-						<module name="Checker">
-							<property name="severity" value="warning" />
-							<module name="TreeWalker">
-								<module name="AnnotationUseStyle" />
-							</module>
-						</module>
-					</checkstyleRules>
+<!-- 					<checkstyleRules> -->
+<!-- 						<module name="Checker"> -->
+<!-- 							<property name="severity" value="warning" /> -->
+<!-- 							<module name="TreeWalker"> -->
+<!-- 								<module name="AnnotationUseStyle" /> -->
+<!-- 							</module> -->
+<!-- 						</module> -->
+<!-- 					</checkstyleRules> -->
 				</configuration>
 			</plugin>
 			<plugin>
